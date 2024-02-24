@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* nav bar  */
+  .nav-item {
+    @apply font-medium px-4 py-2 hover:text-white;
+  }
+  .nav-item-icon {
+    @apply font-medium px-1 py-1 hover:text-white;
+  }
+  .nav-item-mobile {
+    @apply font-medium px-1 py-1 hover:bg-gray-800 hover:text-white;
+  }
+  .mini-nav-link {
+    @apply dark:text-white text-black text-base rounded-full hover:bg-[#f36217] font-medium px-5 py-1 dark:hover:bg-[#d7510b];
+  }
+
+  /* button  */
+  .primary-btn {
+    @apply text-white text-base md:text-xs lg:text-base bg-orange-600 border-0 border-orange-300 focus:outline-none hover:bg-[#f36217] font-medium rounded-lg px-10 py-1 md:py-2 dark:hover:bg-[#d7510b];
+  }
+  ::-webkit-scrollbar {
+    width: 5px; /* You can adjust this value for scrollbar width */
+    height: 5px;
+  }
+
+  /* Set the background color of the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: inherit; /* You can adjust this value for track color */
+  }
+
+  /* Set the color and border radius of the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* You can adjust this value for thumb color */
+    border-radius: 4px; /* You can adjust this value for thumb border radius */
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(234 88 12); /* You can adjust this value for thumb color */
+  }
+}
