@@ -95,10 +95,10 @@ const FilterTv = ({ toggleGenre, setToggleGenre }) => {
                   onClick={() => handleSelectGenre(i.id, i.name)}
                 >
                   <h6
-                    className={`${
+                    className={`dark:bg-gray-600 ${
                       selectedGenre.find((each) => each.id === i.id) &&
-                      "bg-orange-500 text-white"
-                    } border-2 px-3 py-1 font-medium border-orange-600 bg-gray-100 mr-1 hover:bg-orange-600 hover:text-white rounded-full text-sm mb-2`}
+                      "bg-orange-500 text-white dark:bg-orange-500"
+                    } border-2 px-3 py-1 font-medium border-orange-600  bg-gray-100 mr-1 hover:bg-orange-600 hover:text-white rounded-full text-sm mb-2`}
                   >
                     {i.name}
                   </h6>

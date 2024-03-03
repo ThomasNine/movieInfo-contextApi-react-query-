@@ -31,7 +31,7 @@ const CarouselHomePage = ({ slides, page }) => {
           <SplideSlide key={slide.id} onClick={() => handleGotoDetail(slide)}>
             <div className="relative w-screen max-h-screen">
               <img
-                className=" brightness-[.85] h-[800px] sm:h-full object-cover"
+                className=" brightness-[.85] h-[800px] sm:h-full object-cover w-full"
                 src={`https://image.tmdb.org/t/p/original${slide.backdrop_path}`}
                 alt={slide.title}
               />

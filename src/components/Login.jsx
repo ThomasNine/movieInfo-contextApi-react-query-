@@ -14,7 +14,6 @@ import {
   Spinner,
 } from "@nextui-org/react";
 import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../store/AuthContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import { GeneralContext } from "../store/GeneralContext";
@@ -42,6 +41,7 @@ export default function Login() {
   const handleSignUpSubmit = async (e) => {
     e.preventDefault();
     try {
+      setSpinnerLoading(true);
       if (passwordSignUpRef.current.value.length < 8) {
         setInvalid((pre) => ({ ...pre, passwordInvalid: true }));
         setSpinnerLoading(false);
@@ -56,34 +56,34 @@ export default function Login() {
         setSpinnerLoading(false);
         return;
       }
-      setInvalid((pre) => ({
-        emailInvalid: false,
-        passwordInvalid: false,
-        passwordNotMatch: false,
-        loginFail: false,
-      }));
 
       await signUpFn(
         emailSignUpRef.current.value,
         passwordSignUpRef.current.value
       );
+
       setSpinnerLoading(false);
-      // onOpenChange();
-      toast("Sign up Successfully");
+      toast("Sign up success.");
     } catch (error) {
       toast("Sign up fails.");
+      console.log(error);
     }
   };
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
+      setSpinnerLoading(true);
       await logInFn(
         emailLoginRef.current.value,
         passwordLoginRef.current.value
       );
+      setSpinnerLoading(false);
+
       toast("Login Successfully");
     } catch (error) {
       setInvalid((pre) => ({ ...pre, loginFail: true }));
+      toast("Login fail");
+      setSpinnerLoading(false);
     }
   };
 

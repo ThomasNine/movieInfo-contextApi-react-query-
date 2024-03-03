@@ -10,7 +10,7 @@ const VideoListForDetail = ({ trailerData }) => {
       <div className="embla overflow-hidden">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container flex gap-3 mb-3">
-            {trailerData.results.map((i) => (
+            {trailerData?.results.map((i) => (
               <div key={i.id} className=" embla__slide">
                 <h4 className=" mb-2 dark:text-gray-400">{i.type}</h4>
                 <iframe

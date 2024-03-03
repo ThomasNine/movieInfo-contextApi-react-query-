@@ -32,7 +32,6 @@ const Navbar = () => {
       <main className=" bg-black text-gray-400 w-full px-3 sm:px-0 fixed top-0 z-50 opacity-90">
         <nav className="container overflow-hidden mx-auto flex justify-between items-center h-14">
           {/* logo & menu */}
-
           <div className="flex items-center space-x-1">
             <button
               onClick={handleHiddenNavItem}
@@ -75,14 +74,6 @@ const Navbar = () => {
                 TV Shows
               </li>
             </NavLink>
-            {/* <NavLink
-              to={"/people"}
-              className={({ isActive }) => (isActive ? "text-white" : "")}
-            >
-              <li className="nav-item">People</li>
-            </NavLink> */}
-
-            {/* right nav  */}
           </ul>
           <ul className="flex items-center space-x-1">
             {(isMoviesActive || isTVActive) && (

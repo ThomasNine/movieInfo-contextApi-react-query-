@@ -72,7 +72,7 @@ const SearchSuggestion = ({ setSearchSuggestionToggle }) => {
         onClick={() => setSearchSuggestionToggle(false)}
       ></div>
       <div className="absolute top-1/2 left-1/2 px-5 py-5 rounded-lg translate-x-[-50%] translate-y-[-50%]  z-[100] w-[270px] sm:w-[500px] bg-white dark:bg-black dark:shadow-lg dark:shadow-orange-500 shadow-orange-500 shadow">
-        <form className="" onSubmit={handleSubmitForm}>
+        <form onSubmit={handleSubmitForm}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-6 p-2"></div>
             {isMoviesActive && (
@@ -125,7 +125,7 @@ const SearchSuggestion = ({ setSearchSuggestionToggle }) => {
             <input
               type="search"
               id="default-search"
-              className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 focus:outline-orange-500"
+              className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:outline-none dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 focus:outline-orange-500"
               placeholder="Type movie's name"
               autoFocus
               onChange={handleChangeOnText}

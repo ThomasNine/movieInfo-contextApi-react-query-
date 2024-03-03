@@ -31,8 +31,6 @@ const HiddenNavItem = ({ toggle, setToggle, isMoviesActive, isTVActive }) => {
       >
         TV Shows
       </li>
-
-      {/* <li className=" nav-item-mobile ">People</li> */}
     </ul>
   );
 };

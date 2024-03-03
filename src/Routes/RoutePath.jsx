@@ -2,6 +2,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import {
   AiringTodayTvShowsPage,
+  FavoriteMoviesPage,
+  FavoriteTvPage,
   FilterMoviesPage,
   FilterTvPage,
   HomePage,
@@ -10,7 +12,6 @@ import {
   NowPlayingMoivesPage,
   OnTVPage,
   PopularMoviesPage,
-  PopularPeoplePage,
   PopularTvShowsPage,
   SearchPage,
   SerieDetailPage,
@@ -18,14 +19,13 @@ import {
   TopRatedTvShowsPage,
   UpcomingMoviesPage,
 } from "../pages";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 const RoutePath = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/register" />
-        <Route path="/login" />
 
         {/* movies routes  */}
         <Route
@@ -53,6 +53,14 @@ const RoutePath = () => {
           path="/movies/search/:query/page/:page"
           element={<SearchPage />}
         />
+        <Route
+          path="/movies/favorite"
+          element={
+            <ProtectedRoute>
+              <FavoriteMoviesPage />
+            </ProtectedRoute>
+          }
+        />
 
         {/* tv shows  */}
         <Route
@@ -68,9 +76,14 @@ const RoutePath = () => {
         <Route path="/tv/:slug" element={<SerieDetailPage />} />
         <Route path="/tv/:filter/page/:page" element={<FilterTvPage />} />
         <Route path="/tv/search/:query/page/:page" element={<SearchPage />} />
-
-        {/* person  */}
-        <Route path="/people" element={<PopularPeoplePage />} />
+        <Route
+          path="/tv/favorite"
+          element={
+            <ProtectedRoute>
+              <FavoriteTvPage />
+            </ProtectedRoute>
+          }
+        />
 
         {/* fallback route  */}
         <Route path="*" element={<NotFound />} />
