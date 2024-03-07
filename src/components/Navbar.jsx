@@ -12,13 +12,28 @@ import Account from "./Account";
 import Model from "./Model";
 
 const Navbar = () => {
-  const { user, logoutFn } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [toggle, setToggle] = useState(false);
   const { darkMode, setDarkMode } = useContext(DarkModeConstext);
   const { setSearchSuggestionToggle } = useContext(GeneralContext);
   const { pathname } = useLocation();
   const isMoviesActive = pathname.includes("/movies");
   const isTVActive = pathname.includes("/tv");
+  let isDetailActive;
+  if (
+    pathname.includes("/movies/upcoming") ||
+    pathname.includes("/movies/popular") ||
+    pathname.includes("/movies/top-rated") ||
+    pathname.includes("/movies/now-playing") ||
+    pathname.includes("/tv/airing-today") ||
+    pathname.includes("/tv/popular") ||
+    pathname.includes("/tv/top-rated") ||
+    pathname.includes("/tv/on-the-air")
+  ) {
+    isDetailActive = false;
+  } else {
+    isDetailActive = true;
+  }
 
   const handleHiddenNavItem = () => {
     setToggle(!toggle);
@@ -76,7 +91,7 @@ const Navbar = () => {
             </NavLink>
           </ul>
           <ul className="flex items-center space-x-1">
-            {(isMoviesActive || isTVActive) && (
+            {!isDetailActive && (
               <li className=" nav-item-icon " onClick={handleSearch}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

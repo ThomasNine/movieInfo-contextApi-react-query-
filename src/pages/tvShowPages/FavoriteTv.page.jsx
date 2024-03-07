@@ -1,13 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import MoviesCard from "../../components/MoviesCard";
 import { AuthContext } from "../../store/AuthContext";
-import {
-  doc,
-  onSnapshot,
-  updateDoc,
-  getDoc,
-  collection,
-} from "firebase/firestore";
+import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 

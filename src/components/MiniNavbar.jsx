@@ -153,7 +153,6 @@ const MiniNavbar = () => {
           )}
         </div>
         <div className="relative">
-          n
           {toggleGenre ? (
             <button
               className="mini-nav-link"

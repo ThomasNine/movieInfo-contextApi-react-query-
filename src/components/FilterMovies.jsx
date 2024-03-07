@@ -46,7 +46,7 @@ const FilterMovies = ({ toggleGenre, setToggleGenre }) => {
   };
   console.log(data);
   if (isLoading) {
-    return <div>loading</div>;
+    return <div></div>;
   } else if (isError) {
     return <div>error</div>;
   } else if (isSuccess) {
