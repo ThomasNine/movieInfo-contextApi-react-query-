@@ -1,8 +1,40 @@
-# React + Vite
+# MovieInfo Project With Tmdb api
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application bootstrapped with Vite, utilizing tmdb api.
+## Prerequisites
 
-Currently, two official plugins are available:
+Before running this project, ensure you have Node.js and npm installed on your machine.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+1.Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/ThomasNine/movieInfo-contextApi-react-query-.git
+```
+
+2.Navigate to the project directory:
+
+```bash
+cd movieInfo-contextApi-react-query-
+```
+
+3.Install dependencies:
+
+```bash
+npm install
+```
+
+## Usage
+```bash
+npm run dev
+```
+
+## Tech Stack
+ ### Cilent side
+ React,Axios, React-query, TailwindCSS, NextUi, Mui pagination and AOS animation.
+
+ ### Serverside
+ Firebase Auth
+
+
