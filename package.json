@@ -26,6 +26,7 @@
     "embla-carousel": "^8.0.0-rc22",
     "embla-carousel-react": "^8.0.0-rc22",
     "firebase": "^10.8.0",
+    "firebase-tools": "^13.4.0",
     "framer-motion": "^11.0.5",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
